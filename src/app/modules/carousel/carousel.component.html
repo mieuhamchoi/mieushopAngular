@@ -1,11 +1,11 @@
-<div (mouseenter)="controlLoop(false)" (mouseleave)="controlLoop(true)" class="max-w-[1400px] h-[450px] w-full m-auto py-4 px-4 relative bg-zinc-200 group">
+<div (mouseenter)="controlLoop(false)" (mouseleave)="controlLoop(true)" class="max-w-[1400px] h-[450px] w-full m-auto py-2 px-2 relative bg-zinc-200 group">
     <div style="background-image: url({{pictureList[currentIndex].link}})" class="w-full h-[96%] rouded-2x1 bg-center bg-cover duration-500"></div>
     <!-- Left Arrow -->
     <span (click)="preSlide()" class="hidden group-hover:block absolute top-[50%] translate-x-0 translate-y-[-50%] left-5 text-2x1 rounded-full p-2 bg-black/20 text-white cursor-pointer material-symbols-outlined">arrow_back_ios</span>
     <!-- Right Arrow -->
     <span (click)="nextSlide()" class="hidden group-hover:block absolute top-[50%] translate-x-0 translate-y-[-50%] right-5 text-2x1 rounded-full p-2 bg-black/20 text-white cursor-pointer material-symbols-outlined">arrow_forward_ios</span>
     <!-- Dot Control -->
-    <div class="flex top-4 justify-center py-2">
+    <div class="flex top-4 justify-center py-1">
         <img (click)="circleActive(i)" class="mx-5 w-[20px] h-[20px] cursor-pointer" *ngFor="let obj of pictureList; let i = index" [src]="'https://api.pokemoninmylife.com/uploads/picture/subject/' + getCircle(i) + '.svg'"> 
     </div>
 </div>

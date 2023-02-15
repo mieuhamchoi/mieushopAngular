@@ -9,6 +9,10 @@ const routes: Routes = [
     component: BodyComponent
   },
   {
+    path: 'product',
+    loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) 
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }
@@ -18,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

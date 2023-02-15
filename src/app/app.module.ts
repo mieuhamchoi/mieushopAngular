@@ -11,6 +11,7 @@ import { MaxTextPipe } from './shared/pipes/max-text.pipe';
 import { FooterComponent } from './components/home/footer/footer.component';
 import { PageNotFoundComponent } from './components/common/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

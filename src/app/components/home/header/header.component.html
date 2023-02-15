@@ -13,10 +13,10 @@
     <div class="menubar w-full h-[40px] bg-slate-100 flex justify-center">
         <div class="w-[1400px] h-full">
             <div class="menu w-full h-full flex align-center">
-                <div (click)="commonService.setIndexMenu(catalog.id)" [class]="{active: commonService.getIndexMenu() == catalog.id}" *ngFor="let catalog of catalogList; let i = index" class="menu__item w-[150px] flex items-center justify-center mr-2 cursor-pointer">
+                <a [routerLink]="['/product/catalog/' + catalog.id]" target="_blank" (click)="commonService.setIndexMenu(catalog.id)" [class]="{active: commonService.getIndexMenu() == catalog.id}" *ngFor="let catalog of catalogList; let i = index" class="menu__item w-[150px] flex items-center justify-center mr-2 cursor-pointer">
                     <img  class="item__img w-[auto] h-[25px]" [src]="catalog.iconLink">
                     <span class="item__text text-base ml-2">{{catalog.name}}</span>
-                </div>
+                </a>
             </div>
         </div>
     </div>

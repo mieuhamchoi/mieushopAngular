@@ -12,6 +12,7 @@ export class ProductService {
   private targetPointCatalogs = 'http://localhost:3000/catalogs';
   private targetPointProducts = 'http://localhost:3000/products';
   private targetPointProductByCatalogId = 'http://localhost:3000/products?catalogId=';
+  private targetPointProductById = 'http://localhost:3000/products?id=';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-type': 'application/json'
@@ -32,4 +33,7 @@ export class ProductService {
     return this.httpClient.get<Product[]>(this.targetPointProducts, this.httpOptions)
   }
 
+  public getProductByid(productId: number):Observable<Product> {
+    return this.httpClient.get<Product>(this.targetPointProductById + productId, this.httpOptions)
+  }
 }

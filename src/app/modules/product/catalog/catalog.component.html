@@ -1,1 +1,9 @@
-<p>catalog works!</p>
+<div class="mt-2 grid grid-cols-5 gap-4">
+    <div *ngFor="let product of productList; let j = index" class="product flex flex-col p-2 min-w-[200px] h-full bg-white m-2 rounded relative border-4 border-solid rounded border-stone-200">
+        <img class="product__img w-[auto] max-h-[55%] object-fill cursor-pointer" [src]="product.avatarLink">
+        <span class="product__brand text-base text-slate-300 cursor-pointer font-bold">{{product.brand | uppercase}}</span>
+        <span class="product__name text-base text-slate-400 cursor-pointer font-bold">{{product.name | maxText}}</span>
+        <span class="product__price text-base text-yellow-900 cursor-pointer font-bold">Giá: {{product.price | formatVnd}}</span>
+        <a [routerLink]="['/product/' + product.id]" target="_blank" class="product__btn text-base font-bold absolute right-3 bottom-0 -translate-y-1/2 rounded border-2 border-solid border-teal-900 p-1">Mua Ngay</a>
+    </div>
+</div>

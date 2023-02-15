@@ -39,6 +39,46 @@
     },
     {
       "id": 3,
+      "catalogId": 1,
+      "name": "Nokia Galaxy Pahsu",
+      "des": "điện thoại 2",
+      "price": 6734000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904166-260463305.jpg",
+      "brand": "Nokia",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904167-605357570.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910702-947110673.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910703-392713076.jpg"
+    },
+    {
+      "id": 4,
+      "catalogId": 1,
+      "name": "Nokia Galaxy Pahsu",
+      "des": "điện thoại 2",
+      "price": 6734000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904166-260463305.jpg",
+      "brand": "Nokia",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904167-605357570.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910702-947110673.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910703-392713076.jpg"
+    },
+    {
+      "id": 5,
+      "catalogId": 1,
+      "name": "Nokia Galaxy Pahsu",
+      "des": "điện thoại 2",
+      "price": 6734000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904166-260463305.jpg",
+      "brand": "Nokia",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904167-605357570.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910702-947110673.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910703-392713076.jpg"
+    },
+    {
+      "id": 6,
+      "catalogId": 1,
+      "name": "Nokia Galaxy Pahsu",
+      "des": "điện thoại 2",
+      "price": 6734000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904166-260463305.jpg",
+      "brand": "Nokia",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904167-605357570.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910702-947110673.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910703-392713076.jpg"
+    },
+    {
+      "id": 7,
       "catalogId": 2,
       "name": "Mobistar 43Key",
       "des": "điện thoại 3",
@@ -48,7 +88,7 @@
       "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910709-257520568.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447915714-542722735.jpg"
     },
     {
-      "id": 4,
+      "id": 8,
       "catalogId": 3,
       "name": "Máy Cổ 1",
       "des": "điện thoại 4",
@@ -56,6 +96,16 @@
       "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904164-315062804.jpg",
       "brand": "No Brand",
       "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910709-257520568.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447915714-542722735.jpg"
+    },
+    {
+      "id": 9,
+      "catalogId": 3,
+      "name": "Máy Cổ 1",
+      "des": "điện thoại 4",
+      "price": 1230000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910709-257520568.jpg",
+      "brand": "No Brand",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904164-315062804.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447915714-542722735.jpg"
     }
   ],
   "receipts": [

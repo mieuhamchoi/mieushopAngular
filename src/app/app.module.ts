@@ -10,7 +10,7 @@ import { FormatVndPipe } from './shared/pipes/format-vnd.pipe';
 import { MaxTextPipe } from './shared/pipes/max-text.pipe';
 import { FooterComponent } from './components/home/footer/footer.component';
 import { PageNotFoundComponent } from './components/common/page-not-found/page-not-found.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { PageNotFoundComponent } from './components/common/page-not-found/page-n
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-
+import { ProductService } from 'src/app/shared/services/product/product.service';
+import { Catalog } from 'src/app/shared/interfaces/catalog/catalog';
+import { CommonService } from 'src/app/shared/services/common/common.service';
+import { Product } from 'src/app/shared/interfaces/product/product';
 interface pictureObj {
   title: string;
   link: string;
 }
+
 
 @Component({
   selector: 'app-body',
@@ -12,8 +16,12 @@ interface pictureObj {
 })
 export class BodyComponent {
   public pictureList: pictureObj[] = [];
+  public catalogList: Catalog[] = [];
+  public productList: Product[] = [];
 
-  public ngOnInit() {
+  constructor(private productService: ProductService, public commonService: CommonService) {}
+
+  public ngOnInit():void {
     let pictureList = [
       {
         title: 'ảnh 1',
@@ -29,5 +37,27 @@ export class BodyComponent {
       }
     ]
     this.pictureList = pictureList;
+
+    // get catalog list use product services
+    this.productService.getCatalog().subscribe(data => {
+      this.catalogList = data;
+    })
+
+     // get product list use product services
+    this.productService.getProductList().subscribe(data => {
+      this.productList = data;
+    })
+  }
+
+  public filterProductByCatalogId(catalogId: number):Product[] {
+    let result: Product[] = [];
+    if (catalogId != undefined) {
+      for (let i in this.productList) {
+        if (this.productList[i].catalogId == catalogId) {
+          result.push(this.productList[i]);
+        }
+      }
+    }
+    return result
   }
 }

@@ -1,0 +1,79 @@
+{
+  "catalogs": [
+    {
+      "id": 1,
+      "name": "Cảm Ứng",
+      "iconLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447768077-283271932.svg"
+    },
+    {
+      "id": 2,
+      "name": "Phím Bấm",
+      "iconLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447768076-791207478.svg"
+    },
+    {
+      "id": 3,
+      "name": "Khác",
+      "iconLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447768076-237521784.svg"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "catalogId": 1,
+      "name": "Samsung Galaxy",
+      "des": "điện thoại 1",
+      "price": 12000000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904163-261680213.jpg",
+      "brand": "Sam Sung",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904163-261680213.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447904164-315062804.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447904165-512016960.jpeg"
+    },
+    {
+      "id": 2,
+      "catalogId": 1,
+      "name": "Nokia Galaxy Pahsu",
+      "des": "điện thoại 2",
+      "price": 6734000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904166-260463305.jpg",
+      "brand": "Nokia",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904167-605357570.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910702-947110673.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447910703-392713076.jpg"
+    },
+    {
+      "id": 3,
+      "catalogId": 2,
+      "name": "Mobistar 43Key",
+      "des": "điện thoại 3",
+      "price": 543000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910705-21690516.jpg",
+      "brand": "Mobistar",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910709-257520568.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447915714-542722735.jpg"
+    },
+    {
+      "id": 4,
+      "catalogId": 3,
+      "name": "Máy Cổ 1",
+      "des": "điện thoại 4",
+      "price": 1230000,
+      "avatarLink": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447904164-315062804.jpg",
+      "brand": "No Brand",
+      "pictureList": "https://api.pokemoninmylife.com/uploads/picture/subject/1676447910709-257520568.jpg<>https://api.pokemoninmylife.com/uploads/picture/subject/1676447915714-542722735.jpg"
+    }
+  ],
+  "receipts": [
+    {
+      "id": 1,
+      "userName": "Phước",
+      "numberPhone": "0329577177",
+      "address": "Q8 HCM",
+      "email": "abc@gmail.com"
+    }
+  ],
+  "receiptDetails": [
+    {
+      "id": 1,
+      "receiptId": 1,
+      "productId": 1,
+      "amount": 5,
+      "note": "màu vàng"
+    }
+  ]
+}

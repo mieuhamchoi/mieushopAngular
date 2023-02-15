@@ -1,0 +1,31 @@
+<div class="sticky top-0 z-50">
+    <div class="navbar w-full h-[60px] bg-slate-900 flex justify-center">
+        <div class="w-[1400px] h-full flex justify-between">
+            <div class="iconShop w-[300px]">
+                <img [routerLink]="['']" class="w-full h-full object-fill cursor-pointer" src="../../../../assets/img/ui/logo.png">
+            </div>
+            <div class="cart flex items-center">
+                <span class="cart__icon material-symbols-outlined text-sky-400 text-4xl mr-2">garden_cart</span>
+                <span class="cart__text text-sky-400 text-base">Bạn đang có (1) sản phẩm</span>
+            </div>
+        </div>
+    </div>
+    <div class="menubar w-full h-[40px] bg-slate-100 flex justify-center">
+        <div class="w-[1400px] h-full">
+            <div class="menu w-full h-full flex align-center">
+                <div [class]="{active: true}" class="menu__item w-[150px] flex items-center justify-center mr-2 cursor-pointer">
+                    <img  class="item__img w-[auto] h-[25px]" src="../../../../assets/img/ui/catalog/smartphone.svg">
+                    <span class="item__text text-base ml-2">Cảm Ứng</span>
+                </div>
+                <div class="menu__item w-[150px] flex items-center justify-center mr-2 cursor-pointer">
+                    <img class="item__img w-[auto] h-[25px]" src="../../../../assets/img/ui/catalog/nokia.svg">
+                    <span class="item__text text-base ml-2">Phím Bấm</span>
+                </div>
+                <div class="menu__item w-[150px] flex items-center justify-center mr-2 cursor-pointer">
+                    <img class="item__img w-[auto] h-[25px]" src="../../../../assets/img/ui/catalog/more.svg">
+                    <span class="item__text text-base ml-2">Khác</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

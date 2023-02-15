@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+$fontRoboto: 'Roboto', sans-serif;
+.menubar {
+    .menu {
+        .menu__item {
+            font-family: $fontRoboto;
+            &.active {
+                border-bottom: 1px solid red;
+            }
+        }
+    }
+}

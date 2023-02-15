@@ -1,0 +1,16 @@
+<app-carousel [useConfig]="false" [pictureList]="pictureList" [hoverIsStop]="true" [loop]="{active: true, time: 2000}"></app-carousel>
+<div class="catalogPreview p-2 flex flex-col w-full h-[380px] bg-cover bg-no-repeat my-5" style="background-image: url('../../../../assets/img/ui/catalog_preview_bg.jpg')">
+    <div class="preview__title w-full h-[20%] relative">
+        <span class="title--text text-xl text-white cursor-pointer">Cảm Ứng</span>
+        <a class="title__link--text text-slate-50 cursor-pointer underline absolute right-0 bottom-[50%]">xem tất cả</a>
+    </div>
+    <div class="preview__content w-full flex-1 overflow-y-hidden overflow-x-scroll flex">
+        <div *ngFor="let i of [1,2,3,4,5,6,7,8,9]; let j = index" class="product flex flex-col p-2 min-w-[200px] h-full bg-white m-2 rounded relative">
+            <img class="product__img w-[auto] max-h-[55%] object-fill cursor-pointer" src="../../../../assets/img/dienthoai/1.jpg">
+            <span class="product__brand text-base text-slate-300 cursor-pointer font-bold">{{"samsung" | uppercase}}</span>
+            <span class="product__name text-base text-slate-400 cursor-pointer font-bold">{{"Samsung galaxy utra 20 promax wikimedia" | maxText}}</span>
+            <span class="product__price text-base text-yellow-900 cursor-pointer font-bold">Giá: {{50000000 | formatVnd}}</span>
+            <button class="product__btn text-base font-bold absolute right-3 bottom-0 -translate-y-1/2 rounded border-2 border-solid border-teal-900 p-1">Mua Ngay</button>
+        </div>
+    </div>
+</div>

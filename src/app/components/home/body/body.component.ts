@@ -40,12 +40,20 @@ export class BodyComponent {
 
     // get catalog list use product services
     this.productService.getCatalog().subscribe(data => {
-      this.catalogList = data;
+      if (data.statusCode != 200) {
+        alert("Connect database failed")
+        return
+      }
+      this.catalogList = data.data;
     })
 
      // get product list use product services
     this.productService.getProductList().subscribe(data => {
-      this.productList = data;
+      if (data.statusCode != 200) {
+        alert("Connect database failed")
+        return
+      }
+      this.productList = data.data;
     })
   }
 

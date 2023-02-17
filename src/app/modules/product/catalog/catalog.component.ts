@@ -19,7 +19,11 @@ export class CatalogComponent {
     this.catalogId = Number(this.route.snapshot.paramMap.get('catalogId'));
     this.commonService.setIndexMenu(this.catalogId);
     this.productService.getProductListByCatalogId(this.catalogId).subscribe(data => {
-      this.productList = data;
+      if (data.statusCode != 200) {
+        alert("Connect database failed")
+        return
+      }
+      this.productList = data.data;
     })
   }
 }

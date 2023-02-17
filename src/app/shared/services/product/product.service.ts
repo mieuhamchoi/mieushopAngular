@@ -9,9 +9,7 @@ import { Product } from '../../interfaces/product/product';
   providedIn: 'root'
 })
 export class ProductService {
-  private targetPointCatalogs = 'http://localhost:3000/catalogs';
-  private targetPointProducts = 'http://localhost:3000/products';
-  private targetPointProductByCatalogId = 'http://localhost:3000/products?catalogId=';
+  private targetPoint = 'http://localhost:3000/';
   private targetPointProductById = 'http://localhost:3000/products?id=';
   private httpOptions = {
     headers: new HttpHeaders({
@@ -21,16 +19,16 @@ export class ProductService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getCatalog():Observable<Catalog[]> {
-    return this.httpClient.get<Catalog[]>(this.targetPointCatalogs, this.httpOptions)
+  public getCatalog():Observable<any> {
+    return this.httpClient.get<any>(this.targetPoint + 'catalogs', this.httpOptions)
   }
 
-  public getProductListByCatalogId(catalogId: number):Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.targetPointProductByCatalogId + catalogId, this.httpOptions)
+  public getProductListByCatalogId(catalogId: number):Observable<any> {
+    return this.httpClient.get<any>(this.targetPoint + 'products/by-catalog/' +  catalogId, this.httpOptions)
   }
 
-  public getProductList():Observable<Product[]> {
-    return this.httpClient.get<Product[]>(this.targetPointProducts, this.httpOptions)
+  public getProductList():Observable<any> {
+    return this.httpClient.get<any>(this.targetPoint + 'products', this.httpOptions)
   }
 
   public getProductByid(productId: number):Observable<Product> {

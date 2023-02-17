@@ -16,7 +16,11 @@ export class HeaderComponent {
   public ngOnInit():void {
     // get catalog list use product services
     this.productService.getCatalog().subscribe(data => {
-      this.catalogList = data;
+      if (data.statusCode != 200) {
+        alert("Connect database failed")
+        return
+      }
+      this.catalogList = data.data;
     })
   }
 }

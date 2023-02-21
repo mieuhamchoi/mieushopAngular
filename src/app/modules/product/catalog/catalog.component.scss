@@ -1,0 +1,7 @@
+.paging {
+    .page__number {
+        &.active {
+            color: blue;
+        }
+    }
+}

@@ -35,6 +35,18 @@ export class ProductService {
     return this.httpClient.get<any>(this.targetPoint + 'products', httpOptions)
   }
 
+  public searchProduct(search: string, startPage:number, maxItem:number):Observable<any> {
+    let params = { search: search, page: startPage, limit: maxItem };
+    let headers = new HttpHeaders({
+      'Content-type': 'application/json'
+    })
+    let httpOptions = {
+      params,
+      headers
+    }
+    return this.httpClient.get<any>(this.targetPoint + 'products', httpOptions)
+  }
+
   public getProductList():Observable<any> {
     return this.httpClient.get<any>(this.targetPoint + 'products', this.httpOptions)
   }

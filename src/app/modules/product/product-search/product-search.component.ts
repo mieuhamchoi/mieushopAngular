@@ -5,11 +5,11 @@ import { CommonService } from 'src/app/shared/services/common/common.service';
 import { ProductService } from 'src/app/shared/services/product/product.service';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.scss']
+  selector: 'app-product-search',
+  templateUrl: './product-search.component.html',
+  styleUrls: ['./product-search.component.scss']
 })
-export class ProductDetailComponent {
+export class ProductSearchComponent {
   private search:string | null = "";
   public productList:Product[] = [];
   public startPage: number = 1;
@@ -22,6 +22,7 @@ export class ProductDetailComponent {
     this.search = this.route.snapshot.paramMap.get('search');
 
     this.productService.searchProduct(String(this.search), this.startPage, this.maxItem).subscribe(data => {
+      console.log(data)
       if (data.statusCode != 200) {
         alert("Connect database failed")
         return

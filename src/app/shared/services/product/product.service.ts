@@ -23,8 +23,16 @@ export class ProductService {
     return this.httpClient.get<any>(this.targetPoint + 'catalogs', this.httpOptions)
   }
 
-  public getProductListByCatalogId(catalogId: number):Observable<any> {
-    return this.httpClient.get<any>(this.targetPoint + 'products/by-catalog/' +  catalogId, this.httpOptions)
+  public getProductListByCatalogId(catalogId: number, startPage:number, maxItem:number):Observable<any> {
+    let params = { catalogid: catalogId, page: startPage, limit: maxItem };
+    let headers = new HttpHeaders({
+      'Content-type': 'application/json'
+    })
+    let httpOptions = {
+      params,
+      headers
+    }
+    return this.httpClient.get<any>(this.targetPoint + 'products', httpOptions)
   }
 
   public getProductList():Observable<any> {

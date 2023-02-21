@@ -12,18 +12,24 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 export class CatalogComponent {
   private catalogId:number | null = null;
   public productList:Product[] = [];
+  public startPage: number = 1;
+  public maxItem: number = 5;
+  public totalPages: number = 0;
   
   constructor(public productService: ProductService,public commonService: CommonService, private route: ActivatedRoute, private router: Router){}
 
   ngOnInit() {
     this.catalogId = Number(this.route.snapshot.paramMap.get('catalogId'));
     this.commonService.setIndexMenu(this.catalogId);
-    this.productService.getProductListByCatalogId(this.catalogId).subscribe(data => {
+    this.productService.getProductListByCatalogId(this.catalogId, this.startPage, this.maxItem).subscribe(data => {
+      console.log("data 55", data)
       if (data.statusCode != 200) {
         alert("Connect database failed")
         return
       }
-      this.productList = data.data;
+      this.productList = data.data.items;
+      this.totalPages = data.data.meta.totalPages;
+      this.startPage = data.data.meta.currentPage;
     })
   }
 }

@@ -3,6 +3,7 @@ import { ProductService } from 'src/app/shared/services/product/product.service'
 import { Catalog } from 'src/app/shared/interfaces/catalog/catalog';
 import { CommonService } from 'src/app/shared/services/common/common.service';
 import { Product } from 'src/app/shared/interfaces/product/product';
+import { ActivatedRoute, Router } from '@angular/router';
 interface pictureObj {
   title: string;
   link: string;
@@ -18,8 +19,9 @@ export class BodyComponent {
   public pictureList: pictureObj[] = [];
   public catalogList: Catalog[] = [];
   public productList: Product[] = [];
+  public searchInfo:string = "";
 
-  constructor(private productService: ProductService, public commonService: CommonService) {}
+  constructor(private productService: ProductService, public commonService: CommonService,  private route: ActivatedRoute, private router: Router) {}
 
   public ngOnInit():void {
     let pictureList = [
@@ -67,5 +69,10 @@ export class BodyComponent {
       }
     }
     return result
+  }
+
+  public searchAction() {
+    // naviga
+    this.router.navigateByUrl('/product/productlist/' + this.searchInfo)
   }
 }

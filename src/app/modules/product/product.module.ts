@@ -4,22 +4,18 @@ import { ProductComponent } from './product.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductRoutingModule } from './product-routing.module';
-import { FormatVndPipe } from 'src/app/shared/pipes/format-vnd.pipe';
-import { MaxTextPipe } from 'src/app/shared/pipes/max-text.pipe';
-
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
     ProductComponent,
     CatalogComponent,
     ProductDetailComponent,
-    FormatVndPipe,
-    MaxTextPipe,
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    SharedModule
   ]
 })
 export class ProductModule { }
